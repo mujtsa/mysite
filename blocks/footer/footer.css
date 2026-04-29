@@ -11,25 +11,22 @@ footer .footer {
   padding: 48px 24px 24px;
 }
 
-footer .footer .section {
+/* Reset section margins inside footer */
+footer .footer > div {
   margin: 0;
   padding: 0;
 }
 
-/* Main nav area - first section: logo + 3 columns */
-footer .footer .section:first-child {
+/* First section: logo + 3 nav columns */
+footer .footer > div:first-child {
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 32px;
+  grid-template-columns: 100px repeat(3, 1fr);
+  gap: 48px;
   padding-bottom: 32px;
 }
 
-footer .footer .section:first-child > .default-content-wrapper {
-  grid-column: 1 / -1;
-}
-
-/* EDC logo in footer */
-footer .footer .section:first-child img {
+/* EDC logo */
+footer .footer > div:first-child img {
   width: 100px;
   height: auto;
 }
@@ -51,8 +48,9 @@ footer .footer ul {
   margin: 0;
 }
 
-footer .footer ul li {
+footer .footer li {
   margin-bottom: 16px;
+  list-style: none;
 }
 
 footer .footer a:any-link {
@@ -65,8 +63,8 @@ footer .footer a:hover {
   text-decoration: underline;
 }
 
-/* Logos section - second section */
-footer .footer .section:nth-child(2) {
+/* Logos section */
+footer .footer > div:nth-child(2) {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -74,13 +72,13 @@ footer .footer .section:nth-child(2) {
   border-top: 3px solid #1a65b2;
 }
 
-footer .footer .section:nth-child(2) img {
+footer .footer > div:nth-child(2) img {
   height: 40px;
   width: auto;
 }
 
-/* Legal bar - last section */
-footer .footer .section:last-child {
+/* Legal bar */
+footer .footer > div:last-child {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -90,45 +88,27 @@ footer .footer .section:last-child {
   border-top: 1px solid rgb(29 29 29 / 30%);
 }
 
-footer .footer .section:last-child p {
+footer .footer > div:last-child p {
   margin: 0;
   font-size: var(--body-font-size-s);
 }
 
-footer .footer .section:last-child a:any-link {
+footer .footer > div:last-child a:any-link {
   color: #1a65b2;
   margin-left: 16px;
 }
 
-footer .footer .section:last-child ul {
+footer .footer > div:last-child ul {
   display: flex;
   gap: 12px;
 }
 
-footer .footer .section:last-child ul li {
+footer .footer > div:last-child li {
   margin: 0;
 }
 
-@media (width >= 600px) {
-  footer .footer .section:first-child {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  footer .footer .section:first-child > .default-content-wrapper {
-    grid-column: 1 / -1;
-  }
-}
-
-@media (width >= 900px) {
-  footer .footer {
-    padding: 48px 32px 24px;
-  }
-
-  footer .footer .section:first-child {
-    grid-template-columns: 100px repeat(3, 1fr);
-  }
-
-  footer .footer .section:first-child > .default-content-wrapper {
-    grid-column: 1 / 2;
+@media (width < 900px) {
+  footer .footer > div:first-child {
+    grid-template-columns: 1fr;
   }
 }
