@@ -40,24 +40,27 @@ header nav[aria-expanded='true'] {
 
   header nav,
   header nav[aria-expanded='true'] {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 8px 32px;
+    display: grid;
+    grid-template:
+      'brand brand brand' auto
+      'sections . tools' auto / auto 1fr auto;
+    gap: 0 32px;
     max-width: 1264px;
-    padding: 12px 32px;
+    padding: 16px 32px 12px;
     height: auto;
     min-height: 0;
     overflow: visible;
+    align-items: center;
   }
 
   header nav .nav-brand {
-    margin-right: auto;
+    padding-bottom: 12px;
+    border-bottom: 1px solid rgb(29 29 29 / 10%);
+    grid-column: 1 / -1;
   }
 
   header nav .nav-sections {
-    order: 3;
-    width: 100%;
+    padding-top: 12px;
   }
 }
 
