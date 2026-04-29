@@ -39,8 +39,8 @@ header nav[aria-expanded='true'] {
   header nav {
     display: grid;
     grid-template:
-      'brand tools' auto
-      'sections sections' auto / auto 1fr;
+      'brand . tools' auto
+      'sections . tools' auto / auto 1fr auto;
     gap: 8px 32px;
     max-width: 1264px;
     padding: 16px 32px;
