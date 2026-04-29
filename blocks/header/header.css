@@ -171,16 +171,29 @@ header nav[aria-expanded='true'] .nav-sections {
   align-self: start;
 }
 
-header nav .nav-sections ul,
-header nav .nav-sections .default-content-wrapper ul {
+header nav .nav-sections ul {
   list-style: none;
   padding: 0;
   margin: 0;
   font-size: var(--body-font-size-m);
+  display: flex;
+  gap: 32px;
 }
 
-header nav .nav-sections ul > li {
+header nav .nav-sections li {
   font-weight: 500;
+  list-style: none;
+}
+
+header nav .nav-sections a:any-link {
+  color: #1a65b2;
+  font-weight: 500;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+header nav .nav-sections a:hover {
+  text-decoration: underline;
 }
 
 @media (width >= 900px) {
@@ -188,31 +201,6 @@ header nav .nav-sections ul > li {
     display: block;
     visibility: visible;
     white-space: nowrap;
-  }
-
-  header nav .nav-sections ul,
-  header nav .nav-sections .default-content-wrapper ul {
-    display: flex;
-    gap: 32px;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-
-  header nav .nav-sections ul > li a:any-link {
-    color: #1a65b2;
-    font-weight: 500;
-    font-size: 18px;
-    text-decoration: none;
-  }
-
-  header nav .nav-sections ul > li a:hover {
-    text-decoration: underline;
-  }
-
-  header nav .nav-sections .default-content-wrapper > ul > li {
-    flex: 0 1 auto;
-    position: relative;
   }
 }
 
