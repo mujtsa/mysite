@@ -171,7 +171,7 @@ header nav[aria-expanded='true'] .nav-sections {
   align-self: start;
 }
 
-header nav .nav-sections .default-content-wrapper > ul {
+header nav ul {
   list-style: none;
   padding: 0;
   margin: 0;
@@ -180,19 +180,19 @@ header nav .nav-sections .default-content-wrapper > ul {
   gap: 32px;
 }
 
-header nav .nav-sections .default-content-wrapper > ul > li {
+header nav ul li {
   font-weight: 500;
   list-style: none;
 }
 
-header nav .nav-sections .default-content-wrapper a:any-link {
+header nav .nav-sections a:any-link {
   color: #1a65b2;
   font-weight: 500;
   font-size: 18px;
   text-decoration: none;
 }
 
-header nav .nav-sections .default-content-wrapper a:hover {
+header nav .nav-sections a:hover {
   text-decoration: underline;
 }
 
