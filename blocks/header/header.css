@@ -39,12 +39,13 @@ header nav[aria-expanded='true'] {
   header nav {
     display: grid;
     grid-template:
-      'brand . tools' auto
-      'sections . tools' auto / auto 1fr auto;
-    gap: 0 32px;
+      'brand tools' auto
+      'sections sections' auto / auto 1fr;
+    gap: 8px 32px;
     max-width: 1264px;
     padding: 16px 32px;
     height: auto;
+    align-items: center;
   }
 
   header nav[aria-expanded='true'] {
@@ -173,7 +174,8 @@ header nav[aria-expanded='true'] .nav-sections {
 
 header nav .nav-sections ul {
   list-style: none;
-  padding-left: 0;
+  padding: 0;
+  margin: 0;
   font-size: var(--body-font-size-m);
 }
 
@@ -292,6 +294,7 @@ header nav .nav-tools {
   grid-area: tools;
   display: flex;
   align-items: center;
+  justify-content: flex-end;
   gap: 16px;
 }
 
