@@ -4,10 +4,19 @@
 }
 
 .banner-announcement {
-  background-color: var(--color-dark-blue, #036);
-  color: var(--background-color, #fff);
+  background-color: var(--color-dark-blue);
+  color: var(--color-white);
   padding: 16px 24px;
   text-align: center;
+  font-size: var(--body-font-size-m);
+  line-height: 1.5;
+}
+
+.banner-announcement h2 {
+  color: var(--color-white);
+  font-size: var(--body-font-size-m);
+  font-weight: 600;
+  margin: 0;
 }
 
 .banner-announcement p {
@@ -15,11 +24,12 @@
   color: inherit;
 }
 
-.banner-announcement a {
-  color: inherit;
+.banner-announcement a:any-link {
+  color: var(--color-white);
   text-decoration: underline;
+  font-weight: 600;
 }
 
 .banner-announcement a:hover {
-  text-decoration: none;
+  color: var(--color-accent-blue);
 }
