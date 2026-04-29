@@ -187,10 +187,10 @@ header nav ul {
   margin: 0;
   font-size: var(--body-font-size-m);
   display: flex;
-  gap: 32px;
+  gap: 24px;
 }
 
-header nav ul li {
+header nav ul > li {
   font-weight: 500;
   list-style: none;
 }

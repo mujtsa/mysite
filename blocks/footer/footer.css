@@ -5,37 +5,48 @@ footer {
   color: var(--text-color);
 }
 
-footer .footer > div {
+footer .footer {
+  max-width: var(--max-width, 1200px);
   margin: auto;
-  max-width: var(--max-width);
-  padding: 48px 24px;
+  padding: 48px 24px 24px;
 }
 
-/* main navigation area */
-footer .footer > div:first-child {
+footer .footer .section {
+  margin: 0;
+  padding: 0;
+}
+
+/* Main nav area - first section: logo + 3 columns */
+footer .footer .section:first-child {
   display: grid;
   grid-template-columns: 1fr;
   gap: 32px;
+  padding-bottom: 32px;
 }
 
-footer .footer > div:first-child > p:first-child {
-  margin: 0;
+footer .footer .section:first-child .default-content-wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
 }
 
-footer .footer > div:first-child > p:first-child img {
+/* EDC logo in footer */
+footer .footer .section:first-child img {
   width: 100px;
   height: auto;
 }
 
+/* Footer headings */
 footer .footer h3 {
   font-size: var(--body-font-size-m);
   font-weight: 600;
   margin: 0 0 16px;
   padding-bottom: 12px;
-  border-bottom: 3px solid var(--color-primary);
+  border-bottom: 3px solid #1a65b2;
   color: var(--text-color);
 }
 
+/* Footer lists - vertical */
 footer .footer ul {
   list-style: none;
   padding: 0;
@@ -52,75 +63,68 @@ footer .footer a:any-link {
 }
 
 footer .footer a:hover {
-  color: var(--link-color);
+  color: #1a65b2;
   text-decoration: underline;
 }
 
-/* logos bar */
-footer .footer > div:nth-child(2) {
+/* Logos section - second section */
+footer .footer .section:nth-child(2) {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 32px;
-  padding-bottom: 32px;
-  border-top: 3px solid var(--color-primary);
+  padding: 32px 0;
+  border-top: 3px solid #1a65b2;
 }
 
-footer .footer > div:nth-child(2) img {
+footer .footer .section:nth-child(2) img {
   height: 40px;
   width: auto;
 }
 
-/* legal bar */
-footer .footer > div:last-child {
+/* Legal bar - last section */
+footer .footer .section:last-child {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   gap: 16px;
   padding-top: 24px;
-  padding-bottom: 24px;
-  border-top: 1px solid var(--color-grey-border);
+  border-top: 1px solid rgb(29 29 29 / 30%);
 }
 
-footer .footer > div:last-child p {
+footer .footer .section:last-child p {
   margin: 0;
   font-size: var(--body-font-size-s);
-  color: var(--text-color);
 }
 
-footer .footer > div:last-child p a:any-link {
-  color: var(--link-color);
+footer .footer .section:last-child a:any-link {
+  color: #1a65b2;
   margin-left: 16px;
 }
 
-footer .footer > div:last-child ul {
+footer .footer .section:last-child ul {
   display: flex;
   gap: 12px;
 }
 
-footer .footer > div:last-child ul li {
+footer .footer .section:last-child ul li {
   margin: 0;
 }
 
-footer .footer > div:last-child ul a:any-link {
-  color: var(--text-color);
-  font-weight: 600;
-}
-
 @media (width >= 600px) {
-  footer .footer > div:first-child {
-    grid-template-columns: auto repeat(2, 1fr);
+  footer .footer .section:first-child .default-content-wrapper {
+    grid-template-columns: 100px repeat(2, 1fr);
+    gap: 32px;
   }
 }
 
 @media (width >= 900px) {
-  footer .footer > div {
-    padding: 48px 32px;
+  footer .footer {
+    padding: 48px 32px 24px;
   }
 
-  footer .footer > div:first-child {
-    grid-template-columns: auto repeat(3, 1fr);
+  footer .footer .section:first-child .default-content-wrapper {
+    grid-template-columns: 100px repeat(3, 1fr);
     gap: 48px;
   }
 }
