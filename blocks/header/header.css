@@ -37,11 +37,14 @@ header nav[aria-expanded='true'] {
   }
 
   header nav {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template:
+      'brand . tools' auto
+      'sections . tools' auto / auto 1fr auto;
     gap: 0 32px;
     max-width: 1264px;
-    padding: 0 32px;
+    padding: 16px 32px;
+    height: auto;
   }
 
   header nav[aria-expanded='true'] {
@@ -143,14 +146,14 @@ header nav[aria-expanded='true'] .nav-hamburger-icon::after {
 /* brand */
 header .nav-brand {
   grid-area: brand;
-  flex-basis: 128px;
+  flex-basis: 100px;
   font-size: var(--heading-font-size-s);
   font-weight: 700;
   line-height: 1;
 }
 
 header nav .nav-brand img {
-  width: 100px;
+  width: 80px;
   height: auto;
 }
 
@@ -227,8 +230,21 @@ header nav .nav-sections ul > li > ul > li {
     display: flex;
     gap: 32px;
     margin: 0;
+  }
+
+  header nav .nav-sections ul > li {
+    color: var(--color-primary);
+  }
+
+  header nav .nav-sections ul > li a:any-link {
     color: var(--color-primary);
     font-weight: 500;
+    font-size: 18px;
+    text-decoration: none;
+  }
+
+  header nav .nav-sections ul > li a:hover {
+    text-decoration: underline;
   }
 
   header nav .nav-sections .default-content-wrapper > ul > li {
@@ -274,12 +290,27 @@ header nav .nav-sections ul > li > ul > li {
 /* tools */
 header nav .nav-tools {
   grid-area: tools;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+header nav .nav-tools p {
+  display: flex;
+  align-items: center;
+  gap: 16px;
 }
 
 header nav .nav-tools a:any-link {
   color: var(--text-color);
   font-size: var(--body-font-size-s);
   font-weight: 500;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+header nav .nav-tools a:hover {
+  text-decoration: underline;
 }
 
 header nav .nav-tools a.button:any-link {
