@@ -24,10 +24,8 @@ footer .footer .section:first-child {
   padding-bottom: 32px;
 }
 
-footer .footer .section:first-child .default-content-wrapper {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 24px;
+footer .footer .section:first-child > .default-content-wrapper {
+  grid-column: 1 / -1;
 }
 
 /* EDC logo in footer */
@@ -112,9 +110,12 @@ footer .footer .section:last-child ul li {
 }
 
 @media (width >= 600px) {
-  footer .footer .section:first-child .default-content-wrapper {
-    grid-template-columns: 100px repeat(2, 1fr);
-    gap: 32px;
+  footer .footer .section:first-child {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  footer .footer .section:first-child > .default-content-wrapper {
+    grid-column: 1 / -1;
   }
 }
 
@@ -123,8 +124,11 @@ footer .footer .section:last-child ul li {
     padding: 48px 32px 24px;
   }
 
-  footer .footer .section:first-child .default-content-wrapper {
+  footer .footer .section:first-child {
     grid-template-columns: 100px repeat(3, 1fr);
-    gap: 48px;
+  }
+
+  footer .footer .section:first-child > .default-content-wrapper {
+    grid-column: 1 / 2;
   }
 }
