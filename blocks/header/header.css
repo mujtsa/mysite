@@ -181,7 +181,7 @@ header nav[aria-expanded='true'] .nav-sections {
   align-self: start;
 }
 
-header nav ul {
+header nav .nav-sections ul {
   list-style: none;
   padding: 0;
   margin: 0;
@@ -190,7 +190,7 @@ header nav ul {
   gap: 24px;
 }
 
-header nav ul > li {
+header nav .nav-sections ul > li {
   font-weight: 500;
   list-style: none;
 }
