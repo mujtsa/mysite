@@ -1,0 +1,40 @@
+{
+  "variantName": "cards-icon",
+  "baseBlock": "cards",
+  "version": "1.0.0",
+  "created": "2026-04-29T15:00:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.edc.ca/",
+    "originPage": "EDC.ca homepage",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "compact",
+    "purpose": "product-cards",
+    "imagePattern": "icon"
+  },
+  "contentPattern": {
+    "structure": "icon + title + link",
+    "buttonCount": 0,
+    "imageCount": 1
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "product/service listing with icons",
+      "feature cards with icons",
+      "navigation cards with visual indicators",
+      "resource cards with icons"
+    ],
+    "notSuitableFor": [
+      "cards with large images",
+      "text-only cards",
+      "article listing cards"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["content/index"],
+    "reuseCount": 1,
+    "lastUsed": "2026-04-29T15:00:00.000Z"
+  }
+}

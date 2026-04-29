@@ -1,0 +1,40 @@
+{
+  "variantName": "cards-article",
+  "baseBlock": "cards",
+  "version": "1.0.0",
+  "created": "2026-04-29T15:00:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.edc.ca/",
+    "originPage": "EDC.ca homepage",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "minimal",
+    "purpose": "article-cards",
+    "imagePattern": "large"
+  },
+  "contentPattern": {
+    "structure": "image + title + description + link",
+    "buttonCount": 0,
+    "imageCount": 1
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "article/blog listing cards",
+      "resource cards with images",
+      "success story cards",
+      "sector-specific content cards"
+    ],
+    "notSuitableFor": [
+      "text-only cards",
+      "icon-based cards",
+      "product cards with pricing"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["content/index"],
+    "reuseCount": 1,
+    "lastUsed": "2026-04-29T15:00:00.000Z"
+  }
+}

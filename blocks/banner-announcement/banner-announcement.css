@@ -1,0 +1,25 @@
+.banner-announcement-container .banner-announcement-wrapper {
+  max-width: unset;
+  padding: 0;
+}
+
+.banner-announcement {
+  background-color: var(--color-dark-blue, #036);
+  color: var(--background-color, #fff);
+  padding: 16px 24px;
+  text-align: center;
+}
+
+.banner-announcement p {
+  margin: 0;
+  color: inherit;
+}
+
+.banner-announcement a {
+  color: inherit;
+  text-decoration: underline;
+}
+
+.banner-announcement a:hover {
+  text-decoration: none;
+}

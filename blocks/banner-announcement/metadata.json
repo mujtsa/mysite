@@ -1,0 +1,40 @@
+{
+  "variantName": "banner-announcement",
+  "baseBlock": "banner",
+  "version": "1.0.0",
+  "created": "2026-04-29T15:00:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.edc.ca/",
+    "originPage": "EDC.ca homepage",
+    "blockPosition": "top"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "dark",
+    "density": "compact",
+    "purpose": "announcement",
+    "imagePattern": "noimg"
+  },
+  "contentPattern": {
+    "structure": "text + link",
+    "buttonCount": 0,
+    "imageCount": 0
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "announcement bars",
+      "CTA banners",
+      "full-width text notifications",
+      "promotional messages"
+    ],
+    "notSuitableFor": [
+      "content with images",
+      "multi-column layouts",
+      "hero sections"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["content/index"],
+    "reuseCount": 1,
+    "lastUsed": "2026-04-29T15:00:00.000Z"
+  }
+}

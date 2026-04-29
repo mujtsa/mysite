@@ -1,0 +1,20 @@
+{
+  "status": "success",
+  "url": "https://www.edc.ca/",
+  "path": "index",
+  "timestamp": "2026-04-29T16:37:25.860Z",
+  "title": "Export Development Canada (EDC)",
+  "template": "homepage",
+  "blocks": [
+    "banner-announcement",
+    "banner-announcement",
+    "hero-banner",
+    "cards-text",
+    "cards-text",
+    "cards-article",
+    "cards-article",
+    "cards-icon",
+    "cards-icon",
+    "cards-icon"
+  ]
+}
