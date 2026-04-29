@@ -11,50 +11,28 @@ footer .footer {
   padding: 48px 24px 24px;
 }
 
-/* Reset section margins inside footer */
-footer .footer > div {
+/* Reset all divs inside footer */
+footer .footer > div,
+footer .footer .section {
   margin: 0;
   padding: 0;
 }
 
-/* First section: logo + 3 nav columns */
-footer .footer > div:first-child {
-  display: grid;
-  grid-template-columns: 100px repeat(3, 1fr);
-  gap: 48px;
-  padding-bottom: 32px;
-}
-
-/* EDC logo */
-footer .footer > div:first-child img {
-  width: 100px;
-  height: auto;
-}
-
-/* Footer headings */
-footer .footer h3 {
-  font-size: var(--body-font-size-m);
-  font-weight: 600;
-  margin: 0 0 16px;
-  padding-bottom: 12px;
-  border-bottom: 3px solid #1a65b2;
-  color: var(--text-color);
-}
-
-/* Footer lists - vertical */
+/* ALL lists in footer: vertical by default */
 footer .footer ul {
   list-style: none;
   padding: 0;
   margin: 0;
-  display: block;
+  display: block !important;
 }
 
 footer .footer li {
   margin-bottom: 16px;
   list-style: none;
-  display: list-item;
+  display: block;
 }
 
+/* Footer links */
 footer .footer a:any-link {
   color: var(--text-color);
   text-decoration: none;
@@ -65,8 +43,32 @@ footer .footer a:hover {
   text-decoration: underline;
 }
 
-/* Logos section */
-footer .footer > div:nth-child(2) {
+/* Footer headings with blue underline */
+footer .footer h3 {
+  font-size: var(--body-font-size-m);
+  font-weight: 600;
+  margin: 0 0 16px;
+  padding-bottom: 12px;
+  border-bottom: 3px solid #1a65b2;
+  color: var(--text-color);
+}
+
+/* EDC logo in footer */
+footer .footer img {
+  max-width: 100px;
+  height: auto;
+}
+
+/* The section containing the nav columns: make it a 4-col grid */
+footer .footer .section:first-child {
+  display: grid;
+  grid-template-columns: 100px repeat(3, 1fr);
+  gap: 48px;
+  padding-bottom: 32px;
+}
+
+/* Logos row */
+footer .footer .section:nth-child(2) {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -74,43 +76,39 @@ footer .footer > div:nth-child(2) {
   border-top: 3px solid #1a65b2;
 }
 
-footer .footer > div:nth-child(2) img {
+footer .footer .section:nth-child(2) img {
   height: 40px;
-  width: auto;
+  max-width: unset;
 }
 
-/* Legal bar */
-footer .footer > div:last-child {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  gap: 16px;
+/* Legal row */
+footer .footer .section:last-child {
   padding-top: 24px;
   border-top: 1px solid rgb(29 29 29 / 30%);
 }
 
-footer .footer > div:last-child p {
-  margin: 0;
+footer .footer .section:last-child p {
+  margin: 0 0 8px;
   font-size: var(--body-font-size-s);
 }
 
-footer .footer > div:last-child a:any-link {
+footer .footer .section:last-child a:any-link {
   color: #1a65b2;
   margin-left: 16px;
 }
 
-footer .footer > div:last-child ul {
-  display: flex;
+/* Social links row - only this specific ul is horizontal */
+footer .footer .section:last-child ul {
+  display: flex !important;
   gap: 12px;
 }
 
-footer .footer > div:last-child li {
+footer .footer .section:last-child li {
   margin: 0;
 }
 
 @media (width < 900px) {
-  footer .footer > div:first-child {
+  footer .footer .section:first-child {
     grid-template-columns: 1fr;
   }
 }
