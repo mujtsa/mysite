@@ -60,9 +60,9 @@ footer .footer img {
 }
 
 /* The section containing the nav columns: make it a 4-col grid */
-footer .footer .section:first-child {
-  display: grid;
-  grid-template-columns: 100px repeat(3, 1fr);
+footer .footer .section {
+  display: grid !important;
+  grid-template-columns: 100px repeat(3, 1fr) !important;
   gap: 48px;
   padding-bottom: 32px;
 }
@@ -108,7 +108,7 @@ footer .footer .section:last-child li {
 }
 
 @media (width < 900px) {
-  footer .footer .section:first-child {
-    grid-template-columns: 1fr;
+  footer .footer .section {
+    grid-template-columns: 1fr !important;
   }
 }
